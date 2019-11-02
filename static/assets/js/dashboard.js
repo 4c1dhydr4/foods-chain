@@ -32,7 +32,7 @@ function random (min, max) {
       data3.push(65)
     }
 
-
+    /*
     //Traffic Chart
     var ctx = document.getElementById( "trafficChart" );
     //ctx.height = 200;
@@ -121,5 +121,5 @@ function random (min, max) {
         }
     } );
 
-
+    */
 } )( jQuery );
