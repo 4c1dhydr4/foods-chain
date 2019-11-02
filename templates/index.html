@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block title %}Panel de Control de Trazabilidad{% endblock %}
+
+{% block breadcrumb %}
+	<li class="active">Dashboard</li>
+{% endblock %}
+
+
+{% block content %}
+	{% include 'partials/cards.html' %}
+	{% include 'partials/world_map.html' %}
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+{% endblock %}
