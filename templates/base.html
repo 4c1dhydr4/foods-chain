@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="{% static 'vendors/flag-icon-css/css/flag-icon.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/selectFX/css/cs-skin-elastic.css' %}">
     <link rel="stylesheet" href="{% static 'vendors/jqvmap/dist/jqvmap.min.css' %}">
-
+    <link rel="stylesheet" href="{% static 'vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css' %}">
 
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 
@@ -36,14 +37,16 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="/"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="/"><img src="{% static 'images/logo2.png' %}" alt="Logo"></a>
+                <h3 class="navbar-brand text-white">Foods <span class="text-danger danger ml-1 mt-1"> Chain</span></h3>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="/"> <i class="menu-icon fa fa-dashboard"></i>Panel de Control</a>
+                        <a href="/"> <i class="menu-icon fa fa-dashboard"></i>Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="/"> <i class="menu-icon ti ti-location-pin"></i>Trazabilidad</a>
                     </li>
                     <h3 class="menu-title">Trazabilidad</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
@@ -147,7 +150,7 @@
 
                             <a class="nav-link" href="#"><i class="fa fa-user"></i> Notificaciones <span class="count">13</span></a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i>COnfiguraciones</a>
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i>Configuraciones</a>
 
                             <a class="nav-link" href="#"><i class="fa fa-power-off"></i>Salir</a>
                         </div>
@@ -155,17 +158,17 @@
 
                     <div class="language-select dropdown" id="language-select">
                         <a class="dropdown-toggle" href="#" data-toggle="dropdown"  id="language" aria-haspopup="true" aria-expanded="true">
-                            <i class="flag-icon flag-icon-us"></i>
+                            <i class="flag-icon flag-icon-es"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="language">
                             <div class="dropdown-item">
-                                <span class="flag-icon flag-icon-fr"></span>
+                                <span class="flag-icon flag-icon-us"></span>
                             </div>
                             <div class="dropdown-item">
                                 <i class="flag-icon flag-icon-es"></i>
                             </div>
                             <div class="dropdown-item">
-                                <i class="flag-icon flag-icon-us"></i>
+                                <i class="flag-icon flag-icon-fr"></i>
                             </div>
                             <div class="dropdown-item">
                                 <i class="flag-icon flag-icon-it"></i>
@@ -209,29 +212,31 @@
     <script src="{% static 'vendors/bootstrap/dist/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/js/main.js' %}"></script>
     <script src="{% static 'vendors/chart.js/dist/Chart.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/dashboard.js' %}"></script>
-    <script src="{% static 'assets/js/widgets.js' %}"></script>
-    <script src="{% static 'vendors/jqvmap/dist/jquery.vmap.min.js' %}"></script>
-    <script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
-    <script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
-    <script>
-        (function($) {
-            "use strict";
+    {% block dashboard %}
+        <script src="{% static 'assets/js/dashboard.js' %}"></script>
+        <script src="{% static 'assets/js/widgets.js' %}"></script>
+        <script src="{% static 'vendors/jqvmap/dist/jquery.vmap.min.js' %}"></script>
+        <script src="{% static 'vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+        <script src="{% static 'vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+        <script>
+            (function($) {
+                "use strict";
 
-            jQuery('#vmap').vectorMap({
-                map: 'world_en',
-                backgroundColor: null,
-                color: '#ffffff',
-                hoverOpacity: 0.7,
-                selectedColor: '#1de9b6',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: ['#1de9b6', '#03a9f5'],
-                normalizeFunction: 'polynomial'
-            });
-        })(jQuery);
-    </script>
+                jQuery('#vmap').vectorMap({
+                    map: 'world_en',
+                    backgroundColor: null,
+                    color: '#ffffff',
+                    hoverOpacity: 0.7,
+                    selectedColor: '#1de9b6',
+                    enableZoom: true,
+                    showTooltip: true,
+                    values: sample_data,
+                    scaleColors: ['#1de9b6', '#03a9f5'],
+                    normalizeFunction: 'polynomial'
+                });
+            })(jQuery);
+        </script>
+    {% endblock %}
 	{% block extra_js %}
 	{% endblock %}
 </body>

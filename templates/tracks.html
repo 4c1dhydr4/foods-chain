@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block title %}Trazabilidad{% endblock %}
+
+{% block content %}
+	{% include 'partials/track_table.html' %}
+{% endblock %}
+
+{% block breadcrumb %}
+	<li class="">Panel de Control</li>
+	<li class="active">Trazabilidad</li>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'vendors/datatables.net/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons/js/dataTables.buttons.min.js' %}"></script>
+    <script src="{% static 'vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js' %}"></script>
+    <script src="{% static 'vendors/jszip/dist/jszip.min.js' %}"></script>
+    <script src="{% static 'vendors/pdfmake/build/pdfmake.min.js' %}"></script>
+    <script src="{% static 'vendors/pdfmake/build/vfs_fonts.js' %}"></script>
+
+	<script src="{% static 'vendors/datatables.net-buttons/js/buttons.html5.min.js' %}"></script>
+	<script src="{% static 'vendors/datatables.net-buttons/js/buttons.print.min.js' %}"></script>
+	<script src="{% static 'vendors/datatables.net-buttons/js/buttons.colVis.min.js' %}"></script>
+	<script src="{% static 'assets/js/init-scripts/data-table/datatables-init.js' %}"></script>
+{% endblock %}
+
+
+{% block dashboard %}
+{% endblock %}

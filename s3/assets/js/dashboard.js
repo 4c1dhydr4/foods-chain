@@ -28,10 +28,9 @@ function random (min, max) {
 
     for (var i = 0; i <= elements; i++) {
       data1.push(random(50, 200))
-      data2.push(random(80, 100))
-      data3.push(65)
+      data2.push(random(80, 150))
+      data3.push(random(10, 24))
     }
-
 
     //Traffic Chart
     var ctx = document.getElementById( "trafficChart" );
@@ -39,10 +38,13 @@ function random (min, max) {
     var myChart = new Chart( ctx, {
         type: 'line',
         data: {
-            labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S', 'M', 'T', 'W', 'T', 'F', 'S', 'S'],
+            labels: ['Lunes 01', 'Martes 02', 'Miércoles 03', 'Jueves 04', 'Viernes 05', 'Sábado 06', 'Domingo 07', 
+                      'Lunes 08', 'Martes 09', 'Miércoles 10', 'Jueves 11', 'Viernes 12', 'Sábado 13', 'Domingo 14', 
+                      'Lunes 15', 'Martes 16', 'Miércoles 17', 'Jueves 18', 'Viernes 19', 'Sábado 20', 'Domingo 21', 
+                      'Lunes 22', 'Martes 23', 'Miércoles 24', 'Jueves 25', 'Viernes 26', 'Sábado 27', 'Domingo 28'],
             datasets: [
             {
-              label: 'My First dataset',
+              label: 'Interacción de Usuarios',
               backgroundColor: convertHex(brandInfo, 10),
               borderColor: brandInfo,
               pointHoverBackgroundColor: '#fff',
@@ -50,7 +52,7 @@ function random (min, max) {
               data: data1
           },
           {
-              label: 'My Second dataset',
+              label: 'Transacciones',
               backgroundColor: 'transparent',
               borderColor: brandSuccess,
               pointHoverBackgroundColor: '#fff',
@@ -58,7 +60,7 @@ function random (min, max) {
               data: data2
           },
           {
-              label: 'My Third dataset',
+              label: 'Uso de Recursos',
               backgroundColor: 'transparent',
               borderColor: brandDanger,
               pointHoverBackgroundColor: '#fff',
@@ -120,6 +122,4 @@ function random (min, max) {
 
         }
     } );
-
-
 } )( jQuery );

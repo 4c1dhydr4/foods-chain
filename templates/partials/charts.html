@@ -1,0 +1,62 @@
+{% load static from staticfiles %}
+<div class="col-sm-12 col-lg-9">
+	<div class="card">
+		<div class="card-body">
+			<div class="row">
+	            <div class="col-sm-4">
+	                <h4 class="card-title mb-0">Uso del Sistema</h4>
+	                <div class="small text-muted">Octubre 2019</div>
+	            </div>
+			</div>
+			<div class="chart-wrapper mt-4">
+			    <canvas id="trafficChart" style="height:100px;" height="100"></canvas>
+			</div>	
+		</div>
+	</div>
+</div>
+<div class="col-xl-3 col-lg-3 col-sm-12">
+    <section class="card">
+        <div class="twt-feed blue-bg">
+            <div class="corner-ribon black-ribon">
+                <i class="ti ti-world"></i>
+            </div>
+            <div class="ti ti-world wtt-mark"></div>
+
+            <div class="media">
+                <a href="#">
+                    <img class="align-self-center rounded-circle mr-3" style="width:85px; height:85px;" alt="" src="{% static 'images/admin.jpg' %}">
+                </a>
+                <div class="media-body">
+                    <h2 class="text-white display-6">Profesor</h2>
+                    <p class="text-light">CEO</p>
+                </div>
+            </div>
+        </div>
+        <div class="weather-category twt-category">
+            <ul>
+                <li class="active">
+                    <h5>52</h5>
+                    Reg. Empresas
+                </li>
+                <li>
+                    <h5>865</h5>
+                    Operaciones
+                </li>
+                <li>
+                    <h5>12</h5>
+                    Destinos Traz.
+                </li>
+            </ul>
+        </div>
+        <div class="twt-write col-sm-12">
+            <textarea placeholder="Buscar" rows="1" class="form-control t-text-area"></textarea>
+        </div>
+        <footer class="twt-footer">
+            <a href="#"><i class="fa fa-map-marker"></i></a>
+            Lima, PE
+            <span class="pull-right">
+             190.18.204.14
+            </span>
+        </footer>
+    </section>
+</div>
