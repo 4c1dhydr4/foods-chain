@@ -1,0 +1,44 @@
+<div class="row">
+	<div class="col-lg-12 col-sm-12">
+		<div class="card">
+			<div class="card-body ">
+				<h1 class="text-center mb-2">Blockchain</h1>
+				<h4 class="text-center"><span class="text-danger">({{hash|slice:10}})</span> {{ company }} - <span class="text-info">{{ product }}</span> - {{ quantity }}Kg.</h4>
+				<div| class="row">
+				{% for block in block_cards %}
+					<div class="col-lg-3 col-md-6 col-sm-6 mt-5">
+						<div class="block_chain">
+							<h3 class="text-center m-1">{{block.id}}</h3>
+							<h3 class="text-center m-1">{{block.stat.0}}</h3>
+							<h3 class="text-center m-1"><i class="fa {{block.stat.1}}"></i></h3>
+						</div>
+						<br>
+						<div class="block_chain text-center">
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<strong class="pull-left">Origen:</strong><span class="pull-right">{{block.origin}}</span>
+								</li>
+								<li class="list-group-item">
+									<strong class="pull-left">Destino:</strong><span class="pull-right">{{block.destination}}</span><br><strong class="pull-left">País:</strong><span class="pull-right">{{block.country}}</span>
+								</li>
+								<li class="list-group-item">
+									<strong class="pull-left">Llegada:</strong><span class="pull-right">{{block.date_in}}</span>
+								</li>
+								<li class="list-group-item">
+									<strong class="pull-left">Salida:</strong><span class="pull-right">{{block.date_out}}</span>
+								</li>
+								<li class="list-group-item">
+									<strong class="pull-left">Public Key:</strong><span class="pull-right text-danger">{{block.public_k|slice:13}}</span>
+								</li>
+								<li class="list-group-item">
+									<strong class="pull-left">Private Key:</strong><span class="pull-right text-primary">{{block.private_k|slice:13}}</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

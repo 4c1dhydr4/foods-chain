@@ -13,10 +13,9 @@
 			            <th scope="col">Registro</th>
 			            <th scope="col">Origen</th>
 			            <th scope="col">Destino</th>
-			            <th scope="col">País</th>
 			            <th scope="col">Producto</th>
 			            <th scope="col">#Lotes</th>
-			            <th scope="col">Peso</th>
+			            <th scope="col">Cantidad</th>
 			            <th scope="col">Blockchain</th>
 			        </tr>
 			    </thead>
@@ -28,14 +27,14 @@
 				            <td class="text-danger"><span>{{ track.company }}</span></td>
 				            <td class="text-info">{{ track.date }}</td>
 				            <td>{{ track.origin }}, PE</td>
-				            <td>{{ track.destination.0 }}</td>
-			            	<td>{{ track.destination.1 }}</td>
+				            <td>{{ track.destination.0 }}, <strong>{{ track.destination.1 }}</strong></td>
 				            <td><strong class="text-primary">{{ track.product }}</strong></td>
 				            <td class="text-success"><h4>{{ track.lote }}</h4></td>
 				            <td class="text-success"><h5>{{ track.quantity }}Kg.</h5></td>
 				            <td>
 				            	<strong>Bloques:</strong>{{ track.blocks }}
-				            	<strong>Key:</strong><span class="text-danger">{{ track.hash|slice:10 }}</span>
+				            	<strong>Key:</strong><span class="text-danger">{{ track.hash|slice:10 }}</span><br>
+				            	<a href="{% url 'blockchain_card' %}" class="badge badge-info">Ingresar</a>
 				            </td>
 				        </tr>
 			        {% endfor %}

@@ -1,11 +1,19 @@
+proces = (
+	('Salida','fa-arrow-circle-o-right'),
+	('Ruta Comercial','fa-road'),
+	('Tránsito','fa-hand-o-right'),
+	('Llegada a Destino','fa-shopping-cart'),
+)
+
 companies = ('Camposol S.A.', 'Virú S.A.', 'Camet Trading S.A.C.', 
 	'SAFCO PERU S.A.', 'Ecosac Agrícola S.A.C.', 'PERUVIAN ANDEAN TROUT S.A.C.',
 	'SUPERFISH S.A.C.', 'REPCO S.A.C.', 'Sunshine Export S.A.C.')
 
 stats = (
-	('Entregado', 'success'), ('Ruta Comercial', 'warning'), 
-	('Atención Urgente', 'danger'), ('Registrado', 'info'), 
-	('Tránsito', 'danger'),('Empaquetando', 'info')
+	('Ruta Comercial', 'warning'), 
+	('Salida', 'info'), 
+	('Tránsito', 'danger'),
+	('Llegada a Destino', 'success')
 )
 
 products = (
