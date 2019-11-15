@@ -21,7 +21,7 @@ def get_cards(blocks):
 			'stat': proces[x],
 			'public_k': hashlib.md5(str(r.randint(1,150000)).encode()).hexdigest,
 			'private_k': hashlib.md5(str(r.randint(1,150000)).encode()).hexdigest,
-			'id': r.randint(1,20)
+			'id': r.randint(1,10)
 		}
 		origin = destination[1]
 		date_in = (date_out[0]+1,date_out[1])

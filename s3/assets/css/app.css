@@ -1,3 +1,12 @@
 .text-black{
 	color: black;
 }
+.block_chain{
+	border: 5px;
+	border-color: black;
+	border-style: solid;
+	padding: 5px
+}
+a{
+	color: red !important;
+}
