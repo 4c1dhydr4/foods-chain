@@ -122,3 +122,6 @@ USE_TZ = False
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 's3')
+
+from django.urls import reverse_lazy
+LOGIN_REDIRECT_URL = reverse_lazy('index')
