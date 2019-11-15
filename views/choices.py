@@ -17,28 +17,9 @@ stats = (
 )
 
 products = (
-	'Espárrago',
-	'Uva',
 	'Palta',
-	'Mango',
-	'Mandarina',
-	'Tangelo',
-	'Naranja',
-	'Limón sutil',
-	'Páprika',
-	'Alcachofa',
-	'Pimiento piquillo',
-	'Jalapeño',
-	'Palmito',
-	'Aceituna',
 	'Café',
 	'Cacao',
-	'Banano',
-	'Frijol ojo negro',
-	'Pallar',
-	'Frijol canario',
-	'Frijol de palo',
-	'Habas',
 )
 
 

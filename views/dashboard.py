@@ -59,3 +59,9 @@ def tacks(request):
 
 def blockchain_card(request):
 	return render(request, 'blockchain_card.html', get_blockchain())
+
+def traceability(request):
+	context = {
+		'':''
+	}
+	return render(request, 'traceability.html', context)
