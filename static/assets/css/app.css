@@ -7,6 +7,14 @@
 	border-style: solid;
 	padding: 5px
 }
-a{
+.red{
 	color: red !important;
+}
+.cellphone{
+	overflow: hidden;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">				
+			<div class="col-md-6 offset-md-3">
+				<div class="row">
+				<br><br>
+					<div class="jumbotron">
+						<div class="row">
+							<div class="col-md-12">
+								<a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" class="col-lg-6 offset-lg-3 col-md-12 col-xs-12 col-sm-12"></a>
+							</div>
+							<div class="col-md-12">
+								<h3 class="text-center m-5">Foods Chain Prototype</h3>
+						        <a href="{% url 'index' %}" type="submit" class="btn btn-block btn-success">Ingresar</a >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
