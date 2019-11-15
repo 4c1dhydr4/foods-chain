@@ -7,18 +7,11 @@
 				<img src="{% static 'images/logo.png' %}">
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="card">
-					<div class="card-head">
-						<h3 class="text-center">Por favor Escanee el código QR del Producto</h3>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<input type="file" accept="image/*" placeholder="Escanea el código QR">
+		<div class="row mt-5">
+			<div class="col-sm-12 open_camera">
+				<h2 class="text-center m-4">QR Scann</h2>
+				<h1><i class="fa fa-camera m-4 cam text-center"></i></h1>
+				<input type="file" accept="image/*" capture="camera">
 			</div>
 		</div>
 	</div>
