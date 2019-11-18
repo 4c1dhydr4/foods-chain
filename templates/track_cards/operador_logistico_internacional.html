@@ -1,0 +1,37 @@
+{% load static from staticfiles %}
+<div class="col-lg-4 col-md-12">
+    <div class="card-header user-header alt bg-dark">
+        <div class="media">
+            <a href="#">
+                <img class="align-self-center rounded-circle mr-3" style="width:150px; height:150px;" alt="" src="{% static 'images/traceability/apl.jpg' %}">
+            </a>
+            <div class="media-body">
+                <h2 class="text-light display-6">Operador Logístico</h2>
+                <p>APL</p>
+            </div>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong>ID</strong> <span class="pull-right">104657824</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Nombre</strong> <span class="pull-right">APL</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Oficina</strong> <span class="pull-right">Edificio City Centre Segundo Piso</span><br><span class="pull-right">Via Ricardo J. Alfaro</span><br><span class="pull-right">República de Panamá</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Tipo de Servicio</strong> <span class="pull-right">2PL</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Duración del Servicio</strong> <span class="pull-right">96 horas</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Código de Operación</strong> <span class="pull-right">PE11231/18112019</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Llave de Operación</strong> <a href="{% url 'blockchain_card' %}" class="pull-right text-danger">DD41A1D3FA3</a>
+        </li>
+    </ul>
+</div>

@@ -10,7 +10,18 @@
 
 {% block content %}
 	{% include 'partials/cards.html' %}
-	{% include 'partials/charts.html' %}
+	<div class="row">
+		<div class="col-lg-12 col-sm-12 col-md-12">
+			{% include 'partials/charts.html' %}
+		</div>
+	</div>
+	{% include 'partials/tables_dashboard.html' %}
+	<div class="row">
+		<div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+			<h4 class="text-danger text-center mb-4">Arquitectura Blockchain</h4>
+			<img class="align-self-center mr-3" alt="" src="{% static 'images/database.png' %}">
+		</div>
+	</div>
 	{% include 'partials/world_map.html' %}
 {% endblock %}
 

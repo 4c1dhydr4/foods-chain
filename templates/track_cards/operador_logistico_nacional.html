@@ -1,0 +1,37 @@
+{% load static from staticfiles %}
+<div class="col-lg-4 col-md-12">
+    <div class="card-header user-header alt bg-dark">
+        <div class="media">
+            <a href="#">
+                <img class="align-self-center rounded-circle mr-3" style="width:150px; height:150px;" alt="" src="{% static 'images/traceability/scano_logo.png' %}">
+            </a>
+            <div class="media-body">
+                <h2 class="text-light display-6">Operador Logístico</h2>
+                <p>Scano Logistics S.A.C.</p>
+            </div>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong>RUC</strong> <span class="pull-right">20601865000</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Razón Social</strong> <span class="pull-right">Scano Logistics S.A.C.</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Oficina</strong> <span class="pull-right">Cal. Carlos Gonzales Nro. 275 Int. 403</span><br><span class="pull-right">Maranga Et. Siete San Miguel</span><br><span class="pull-right">Lima, Perú</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Tipo de Servicio</strong> <span class="pull-right">1PL</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Duración del Servicio</strong> <span class="pull-right">48 horas</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Código de Operación</strong> <span class="pull-right">OP011231/15112019</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Llave de Operación</strong> <a href="{% url 'blockchain_card' %}" class="pull-right text-danger">F441A1D3HH5D</a>
+        </li>
+    </ul>
+</div>

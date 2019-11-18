@@ -1,0 +1,40 @@
+{% load static from staticfiles %}
+<div class="col-lg-4 col-md-12">
+    <div class="card-header user-header alt bg-dark">
+        <div class="media">
+            <a href="#">
+                <img class="align-self-center rounded-circle mr-3" style="width:150px; height:150px;" alt="" src="{% static 'images/traceability/tueste_var.png' %}">
+            </a>
+            <div class="media-body">
+                <h2 class="text-light display-6">Tueste</h2>
+                <p>House Blend</p>
+            </div>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong>Temperatura</strong> <span class="pull-right">190° C°</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Nombre</strong> <span class="pull-right">House Blend</span>
+        </li>        
+        <li class="list-group-item">
+            <strong>Tipo de Secado</strong> <span class="pull-right">Secado Español</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Perdida de Peso</strong> <span class="pull-right">20%</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Aumento de Volumen</strong> <span class="pull-right">15%</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Densidad Aparente</strong> <span class="pull-right">1,25 g/mL</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Proceso de Tueste</strong>
+        </li>
+        <li  class="list-group-item align-self-center">
+            <img src="{% static 'images/traceability/tueste.PNG' %}" class="align-self-center" width="400">
+        </li>
+    </ul>
+</div>

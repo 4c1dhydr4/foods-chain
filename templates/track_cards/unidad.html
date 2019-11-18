@@ -1,0 +1,31 @@
+{% load static from staticfiles %}
+<div class="col-lg-4 col-md-12">
+    <div class="card-header user-header alt bg-dark">
+        <div class="media">
+            <a href="#">
+                <img class="align-self-center rounded-circle mr-3" style="width:150px; height:150px;" alt="" src="{% static 'images/traceability/saco2.jpg' %}">
+            </a>
+            <div class="media-body">
+                <h2 class="text-light display-6">Unidad</h2>
+                <p>10/1231-10112019</p>
+            </div>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <strong>Código</strong> <span class="pull-right">10/1231-10112019</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Fecha de Registro</strong> <span class="pull-right">07/Nov/2019</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Peso Neto</strong> <span class="pull-right">49.8 Kg.</span>
+        </li>
+        <li class="list-group-item">
+            <strong>Crypto Key</strong> <a href="{% url 'traceability' %}" class="pull-right text-danger">D4A4C1A66F</a>
+        </li>
+        <li class="list-group-item">
+            <strong>Certificación</strong> <span class="pull-right"><a class="red" href="https://www.24-7pressrelease.com/assets/attachments/044/press_release_distribution_0443783_118802.jpg" target="_blank">USDA Organic</a></span><br><span class="pull-right"><a class="red" href="http://www.cafferiver.com/images/certificato-utz-coffee.png" target="_blank">UTZ/Rainforest</a></span>
+        </li>
+    </ul>
+</div>

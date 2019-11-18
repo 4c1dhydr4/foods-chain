@@ -28,7 +28,7 @@ function random (min, max) {
 
     for (var i = 0; i <= elements; i++) {
       data1.push(random(50, 200))
-      data2.push(random(80, 150))
+      data2.push(random(50, 100))
       data3.push(random(10, 24))
     }
 

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block body %}
+	<div class="cellphone">
+		<div class="row">
+			<div class="col-lg-4 col-sm-12 col-md-12 offset-lg-4">
+				<img src="{% static 'images/logo.png' %}">
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-sm-12 open_camera text-center">
+				<h2 class="text-center m-1">Seleccione Tipo de Cliente</h2>
+				<img src="{% static 'images/qr.png' %}" width="300">
+				<h5 class="mb-3">Llave Criptográfica: <span class="text-danger">FD1AA31E2</span></h5>
+				<a href="{% url 'company_login' %}"><button class="btn btn-info m-2 btn-block">Empresa/Corporativo</button></a>
+				<a href="{% url 'qr_track' 1 %}"><button class="btn btn-success m-2 btn-block">Usuario</button></a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -28,10 +28,10 @@
 									<strong class="pull-left">Salida:</strong><span class="pull-right">{{block.date_out}}</span>
 								</li>
 								<li class="list-group-item">
-									<strong class="pull-left">Public Key:</strong><span class="pull-right text-danger">{{block.public_k|slice:13}}</span>
+									<strong class="pull-left">Public Key:</strong><a href="{% url 'traceability' %}" class="pull-right text-danger">{{block.public_k|slice:13}}</a>
 								</li>
 								<li class="list-group-item">
-									<strong class="pull-left">Private Key:</strong><span class="pull-right text-primary">{{block.private_k|slice:13}}</span>
+									<strong class="pull-left">Private Key:</strong><a href="{% url 'traceability' %}" class="pull-right text-primary">{{block.private_k|slice:13}}</a>
 								</li>
 							</ul>
 						</div>
