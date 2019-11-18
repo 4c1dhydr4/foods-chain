@@ -40,7 +40,7 @@ def get_blockchain():
 		'status':r.choice(stats),
 		'origin': r.choice(departments),
 		'destination': r.choice(citys),
-		'quantity': r.randint(100,1200),
+		'quantity': r.randint(2,50),
 		'lote': r.randint(1,10),
 		'hash': hashlib.md5(str(r.randint(1,150000)).encode()).hexdigest,
 		'date': '{}/{}/2019'.format(r.randint(1,30),r.randint(9,10)),
