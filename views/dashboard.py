@@ -73,3 +73,7 @@ def traceability(request):
 	context = {}
 	context['empresa'] = True
 	return render(request, 'traceability.html', context)
+
+def case(request):
+	context = {}
+	return render(request, 'case.html', context)
