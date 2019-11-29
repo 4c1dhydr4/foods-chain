@@ -1,3 +1,10 @@
+users = (
+	'admin',
+	'mario_vega',
+	'eptisa_sa',
+	'agroinca',
+)
+
 proces = (
 	('Salida','fa-arrow-circle-o-right'),
 	('Ruta Comercial','fa-road'),

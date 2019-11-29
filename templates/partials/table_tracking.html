@@ -17,7 +17,7 @@
     	{% for track in tracks %}
 	        <tr>
 	            <th scope="row"><h4>{{ forloop.counter }}</h4></th>
-	            <td><span class="badge badge-{{ track.status.1 }}">{{ track.status.0 }}</span></td>
+	            <td><span class="badge badge-{{ track.status.1 }}">{{ track.status.0 }}<br>{{track.id}}</span></td>
 	            <td class="text-danger"><span>{{ track.company }}</span></td>
 	            <td class="text-info">{{ track.date }}</td>
 	            <td><strong>{{ track.origin }}</strong>, PE</td>

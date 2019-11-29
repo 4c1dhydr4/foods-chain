@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from views.choices import (departments, citys, products, companies, stats, proces, empresas)
+from views.choices import *
 import random as r
 import hashlib
 
@@ -18,6 +18,7 @@ def get_cards(blocks):
 			'country': destination[0],
 			'date_in': '{}/{}/2019'.format(date_in[0],date_in[1]),
 			'date_out': '{}/{}/2019'.format(date_out[0],date_out[1]),
+			'user_': r.choice(users),
 			'stat': proces[x],
 			'public_k': hashlib.md5(str(r.randint(1,150000)).encode()).hexdigest,
 			'private_k': hashlib.md5(str(r.randint(1,150000)).encode()).hexdigest,
@@ -42,6 +43,7 @@ def get_blockchain():
 		'destination': r.choice(citys),
 		'quantity': r.randint(2,50),
 		'lote': r.randint(1,10),
+		'id': r.randint(1,999999),
 		'hash': hashlib.md5(str(r.randint(1,150000)).encode()).hexdigest,
 		'date': '{}/{}/2019'.format(r.randint(1,30),r.randint(9,10)),
 		'blocks': blocks,
