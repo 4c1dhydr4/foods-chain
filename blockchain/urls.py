@@ -2,8 +2,9 @@ from django.contrib import admin
 from django.urls import path
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
-from views.dashboard import (index,tacks,blockchain_card, traceability, case)
-from views.phone import (phone, qr_track, client_select, company_login)
+from views.dashboard import *
+from views.phone import *
+from views.cases import *
 
 urlpatterns = [
 	path('', login_required(index), name="index"),
@@ -20,3 +21,6 @@ urlpatterns = [
 	path('accounts/logout/', auth_views.LogoutView.as_view(template_name='logout.html'), name='logout'),
 ]
 
+urlpatterns += [
+	path('salida_almacen/', login_required(salida_almacen), name="salida_almacen"),
+]

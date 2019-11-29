@@ -1,16 +1,11 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
-
-{% block title %}Casos de Uso{% endblock %}
-
-{% block breadcrumb %}
-	<li>Dashboard</li>
-	<li class="active">Casos de Uso de Ingreso de Datos</li>
-{% endblock %}
-
-
-{% block content %}
-	{% include 'case/menu.html' %}
+{% block body %}
+	<div class="cellphone m-5">
+		{% include 'partials/logo.html' %}
+		<h2 class="text-center text-info m-4">Registrar Información</h2>
+		{% include 'case/menu.html' %}
+	</div>
 {% endblock %}
 
 {% block extra_js %}

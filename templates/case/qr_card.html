@@ -1,0 +1,15 @@
+{% load static from staticfiles %}
+<div class="row">
+	<div class="col-sm-6">
+			<img src="{% static 'images/qr.png' %}" class="qr">
+	</div>
+	<div class="col-sm-6">
+		<p>
+			QR Key - Lote 543432/PE <br>
+			Public Key: FD1E23124AAC1 <br>
+			Producto: Café <br>
+			Fecha: {{now|date:"D d M Y"}} <br>
+			Hora: {{now|date:"P"}} <br>
+		</p>
+	</div>
+</div>

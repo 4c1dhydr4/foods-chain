@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block body %}
+	{% include 'partials/logo.html' %}
+	<div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header text-center">
+                    <strong>Registro de Salida de Almacén</strong>
+				{% include 'case/qr_card.html' %}
+                </div>
+                <div class="card-body card-block">
+                    <form action="" method="post" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col col-md-12">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                    <input type="text" placeholder="DNI de Operador" class="form-control">
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="col col-md-12">
+	                                <div class="input-group">
+	                                    <div class="input-group-addon"><i class="fa fa-arrow-circle-o-right"></i></div>
+	                                    <input type="text" placeholder="Ubicación de Salida" class="form-control">
+	                                </div>
+	                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="submit" class="btn btn-success btn-sm">
+                            <i class="fa fa-dot-circle-o"></i> Submit
+                        </button>
+                        <button type="reset" class="btn btn-danger btn-sm">
+                            <i class="fa fa-ban"></i> Reset
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}

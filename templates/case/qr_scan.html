@@ -1,0 +1,10 @@
+{% load static from staticfiles %}
+<div class="row mt-5">
+	<div class="col-sm-12 open_camera text-center">
+		<h2 class="text-center m-1">Código QR de Trazabilidad</h2>
+		<img src="{% static 'images/qr.png' %}" class="qr">
+		<input type="file" accept="image/*" capture="camera" class="cam">
+		<h1><i class="fa fa-camera m-4 cam text-center"></i></h1>
+		<a href="{% url 'client_select' %}"><button class="btn btn-info m-2">Obtener Trazabilidad</button></a>
+	</div>	
+</div>

@@ -2,19 +2,7 @@
 {% load static from staticfiles %}
 {% block body %}
 	<div class="cellphone">
-		<div class="row">
-			<div class="col-lg-4 col-sm-12 col-md-12 offset-lg-4">
-				<img src="{% static 'images/logo.png' %}">
-			</div>
-		</div>
-		<div class="row mt-5">
-			<div class="col-sm-12 open_camera text-center">
-				<h2 class="text-center m-1">Código QR de Trazabilidad</h2>
-				<img src="{% static 'images/qr.png' %}" class="qr">
-				<input type="file" accept="image/*" capture="camera" class="cam">
-				<h1><i class="fa fa-camera m-4 cam text-center"></i></h1>
-				<a href="{% url 'client_select' %}"><button class="btn btn-info m-2">Obtener Trazabilidad</button></a>
-			</div>
-		</div>
+		{% include 'partials/logo.html' %}
+		{% include 'case/qr_scan.html' %}
 	</div>
 {% endblock %}
