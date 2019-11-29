@@ -10,3 +10,28 @@
 .red{
 	color: red !important;
 }
+.cellphone{
+	overflow: hidden;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.cam{
+	display: block;
+}
+.qr{
+	width: 150px;
+	height: 150px;
+}
+.open_camera{
+    padding: 10px 10px;
+    color:#000;
+    border:5px solid #000;
+    display: flex;
+	align-content: center;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
