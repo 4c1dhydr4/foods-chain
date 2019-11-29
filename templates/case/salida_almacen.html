@@ -6,37 +6,91 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-header text-center">
-                    <strong>Registro de Salida de Almacén</strong>
+                    <h2><strong>Registro de Salida de Almacén</strong></h2>
 				{% include 'case/qr_card.html' %}
                 </div>
                 <div class="card-body card-block">
-                    <form action="" method="post" class="form-horizontal">
+                    <form action="{% url 'qr_track' 0 %}" class="form-horizontal">
                         <div class="row form-group">
-                            <div class="col col-md-12">
+                            <div class="col-sm-12 mt-3">
                                 <div class="input-group">
                                     <div class="input-group-addon"><i class="fa fa-user"></i></div>
                                     <input type="text" placeholder="DNI de Operador" class="form-control">
                                 </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-cube"></i></div>
+                                    <input type="text" placeholder="Código de Lote: 543432/PE" class="form-control">
                                 </div>
                             </div>
-                            <div class="row form-group">
-                                <div class="col col-md-12">
-	                                <div class="input-group">
-	                                    <div class="input-group-addon"><i class="fa fa-arrow-circle-o-right"></i></div>
-	                                    <input type="text" placeholder="Ubicación de Salida" class="form-control">
-	                                </div>
-	                                </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-qrcode"></i></div>
+                                    <input type="text" placeholder="Código de Almacén" class="form-control">
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-map"></i></div>
+                                    <input type="text" placeholder="Ubicación de Salida: Valle del Altomayo - Perú" class="form-control"><br>
+                                    <img src="{% static 'images/traceability/map01.PNG' %}" class="mt-2">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-map"></i></div>
+                                    <input type="text" placeholder="Destino: Aeropuerto Jorge Chávez - Lima Perú" class="form-control"><br>
+                                    <img src="{% static 'images/traceability/map05.PNG' %}" class="mt-2">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-car"></i></div>
+                                    <select class="form-control">
+                                        <option selected>Terrestre</option>
+                                        <option>Marítimo</option>
+                                        <option>Aéreo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-qrcode"></i></div>
+                                    <input type="text" placeholder="Placa/Código de Transporte" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <input type="text" placeholder="Hora de Salida: {{ now|date:'P' }}" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <input type="text" placeholder="Fecha de Salida: {{ now|date:'d/m/Y' }}" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <input type="text" placeholder="Llegada Aproximada: {{ tomo }}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-success btn-sm">
-                            <i class="fa fa-dot-circle-o"></i> Submit
-                        </button>
-                        <button type="reset" class="btn btn-danger btn-sm">
-                            <i class="fa fa-ban"></i> Reset
-                        </button>
+                        <a href="{% url 'blockchain_card' %}">
+                            <button class="btn btn-success btn-lg btn-block">
+                                <i class="fa fa-check"></i> Registrar
+                            </button>
+                        </a>
+                        <a href="{% url 'case' %}">
+                            <button class="btn btn-danger btn-lg btn-block mt-2">
+                                <i class="fa fa-ban"></i> Cancelar
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
