@@ -23,4 +23,5 @@ urlpatterns = [
 
 urlpatterns += [
 	path('salida_almacen/', login_required(salida_almacen), name="salida_almacen"),
+	path('llegada_importador/', login_required(llegada_importador), name="llegada_importador"),
 ]

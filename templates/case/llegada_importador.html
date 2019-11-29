@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+{% block body %}
+	{% include 'partials/logo.html' %}
+	<div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2><strong>Registro de Llegada al Importador</strong></h2>
+				{% include 'case/qr_card.html' %}
+                </div>
+                <div class="card-body card-block">
+                    <form action="{% url 'qr_track' 0 %}" class="form-horizontal">
+                        <div class="row form-group">
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group mt-1">
+                                    <div class="input-group-addon"><i class="fa fa-qrcode"></i></div>
+                                    <input type="number" placeholder="Código de Operación: 567324" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group mt-1">
+                                    <div class="input-group-addon"><i class="fa fa-key"></i></div>
+                                    <input type="text" placeholder="HASH: C1H2AD1F23FF32DAF21D" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group mt-1">
+                                    <div class="input-group-addon"><i class="fa fa-tag"></i></div>
+                                    <input type="text" placeholder="Importador: AvocadoSmart LTD." class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-map"></i></div>
+                                    <input type="text" placeholder="Ubicación de Llegada: 2-8 Cornwall Rd, NY" class="form-control"><br>
+                                    <img src="{% static 'images/traceability/map_llegada02.PNG' %}" class="mt-2">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <input type="text" placeholder="Hora de Registro: {{ now|date:'P' }}" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+                                    <input type="text" placeholder="Hora de Llegada: {{ now|date:'P' }}" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <div class="input-group">
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                    <input type="text" placeholder="Fecha de Llegada: {{ now|date:'d/m/Y' }}" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="card-footer">
+                        <a href="{% url 'blockchain_card' %}">
+                            <button class="btn btn-success btn-lg btn-block">
+                                <i class="fa fa-check"></i> Registrar
+                            </button>
+                        </a>
+                        <a href="{% url 'case' %}">
+                            <button class="btn btn-danger btn-lg btn-block mt-2">
+                                <i class="fa fa-ban"></i> Cancelar
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
